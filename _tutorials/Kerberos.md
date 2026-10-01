@@ -11,7 +11,7 @@ Kerberos es un protocolo de autenticación de red que permite a usuarios y servi
 ![Componentes Kerberos](https://miro.medium.com/v2/resize:fit:720/format:webp/1*NbvqDTvTl8RS49dtFHjG7A.png)
 ## Protocolo
 ### Analogía feria atracciones
-![Kerberos protocol 2]({% link /resources/img/Kerberos02.png %})
+
 
 > Una forma de  pensar en  el uso de Kerberos  es  imaginar que  vas a  un  parque de atracciones.
 > Cuando  llegas al  parque, te diriges  a  la puerta principal. Luego, te diriges a la taquilla principal (el servidor de autenticación en el centro de distribución de claves) y compras un pase de un día para el parque (un ticket que te da acceso).
@@ -26,7 +26,7 @@ Kerberos es un protocolo de autenticación de red que permite a usuarios y servi
 
 ![Kerberos protocol 1](https://danlebrero.com/images/kerberos-for-dummies-2.jpg)
 ___
-![Kerberos protocol 2]({% link /resources/img/Kerberos01.png %})
+
 
 ![Kerberos protocol 3](https://www.varonis.com/hubfs/Imported_Blog_Media/Kerberos-Graphics-1-v2-787x790.jpg)
 
@@ -254,7 +254,7 @@ Al instalar el paquete _krb5-kdc_ se nos pedira que introduzcamos información.
 * Kerberos servers for your realm: kdc.asir2.grao
 * kdc admin server: kdc.asir2.grao
 
-![kdc-install01]({% link /resources/img/kdc_install01.png %})
+
 
 Una vez instalado, será necesario configurar el servidor kerberos.
 

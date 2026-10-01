@@ -37,7 +37,7 @@ $ newgrp incus-admin
 ```bash
 $ incus admin init
 ```
- ### Create instance
+### Create instance
 ```bash
 $ incus image list images:
 $ incus launch images:ubuntu/24.04 <instance name>
@@ -55,12 +55,12 @@ $ incus import backup0.tar.gz [<instance_name>]
 
 ### Basic provisioning
 ```bash
-incus$ incus exec <instance> -- bash -c 'apt-get update && apt-get -y install  aptitude wget bash-completion gpg nano xsel vim' 
+$ incus exec <instance> -- bash -c 'apt-get update && apt-get -y install  aptitude wget bash-completion gpg nano xsel vim' 
 ```
 
 
-```
-  ### List instances
+### List instances
+
  ```bash
 $ incus list -c ns4t
 $ incus list -c n -f csv
@@ -70,7 +70,8 @@ $ incus list -c n -f csv
 $ incus exec <instance> -- <command> --force-noninteractive
 $ incus exec <instance> -- <command>
 ```
- ### Global config
+
+### Global config
  ```bash
 $ incus config show
 $ incus config set core.http-address :8443
@@ -79,14 +80,14 @@ $ incus config trust list
 $ incus config trust add-certificate <file>
 ``` 
  
- ### File push
-  ```bash
+### File push
+```bash
 $ incus file push <source path> <instance>/<path>
 $ incus file push /etc/hosts foo/etc/hosts
 $ incus file push <source file> <instance>/<path> --gid 1001 --uid 1001
 
 ``` 
- ### Profiles
+### Profiles
  ```bash
 $ incus profile list
 $ incus profile show default
@@ -105,13 +106,74 @@ EOF
 ### Shared folders
 ```bash
 $ incus config device add <instance> mysharedfolder disk source=/home/<host_user>/incus_shared/ path=<instance path> shift=true
-$ incus config set <instance> raw.idmap "both 1000 2000"
-$ incus config set <instance> raw.idmap "uid 50-60 500-510"
-$ incus config set <instance> raw.idmap "gid 100000-110000 10000-20000"
+$ incus config set <instance> raw.idmap="both 1000 2000"
+$ incus config set <instance> raw.idmap="uid 50-60 500-510"
+$ incus config set <instance> raw.idmap="gid 100000-110000 10000-20000"
 ```
 
- ### Network
- #### Managed bridged network
+### Incus TLS
+Obtenemos un certificado de nuestra CA
+
+```bash
+$step ca  certificate incus --san=incus.ies.grao --san=server.ies.grao --san=incus.casacam.net --san=localhost --san=127.0.0.1 /tmp/server.crt /tmp/server.key
+
+$cp /tmp/server.key /var/lib/incus/
+$cp /tmp/server.crt /var/lib/incus/
+```
+
+
+### Autenticacion OIDC
+
+```bash
+config:
+  core.https_address: :8443
+  oidc.audience: https://server.ies.grao:8443
+  oidc.claim: preferred_username
+  oidc.client.id: incus
+  oidc.issuer: https://authelia.ies.grao:9091
+  oidc.scopes: openid,email,profile,groups
+```
+
+Actualizamos el fichero de nuestro _IdP_ (authelia)
+
+```yaml
+      - client_id: 'incus'
+        client_name: 'Incus'
+        public: true
+        authorization_policy: 'one_factor'
+        require_pkce: false
+        pkce_challenge_method: ''
+        redirect_uris:
+          - 'https://incus.ies.grao/oidc/callback'
+          - 'https://incus.ies.grao:8443/oidc/callback'
+        audience:
+          - 'https://incus.ies.grao:8443'
+          - 'https://incus.ies.grao'
+        scopes:
+          - 'openid'
+          - 'offline_access'
+          - 'profile'
+          - 'email'
+          - 'groups'
+        response_types:
+          - 'code'
+        grant_types:
+          - 'authorization_code'
+          - 'refresh_token'
+        access_token_signed_response_alg: 'RS256'
+        userinfo_signed_response_alg: 'none'
+        token_endpoint_auth_method: 'none'
+        consent_mode: 'auto'
+        pre_configured_consent_duration: '1 week'
+```
+
+```bash
+
+```
+
+
+### Network
+#### Managed bridged network
 > [!NOTE]
 > Incus `managed bridged network` crea una subred para cada máquina virtual, la ip la obtiene de un servidor DHCP que crea para dicho segmento.
 ---
@@ -193,12 +255,18 @@ $ incus config device remove c1 eth
 ### Macvlan 
 >[!NOTE]
 > Incus `macvlan network` **NO** requiere de configuración adicional, esta basada en un modulo del kernel de linux _legacy_.  obtiene la IP de la LAN donde se encuentra el _host_ pero la limitación es que las comunicaciónes entre el _host_ y la _VM_ no son posibles.
+
+* Create a `macvlan` network
+```bash
+$ incus network create macvlan --type=macvlan parent=enp1s0
+$ incus config device override <instace> eth0 network=macvlan
+``` 
  
-  * Create a `macvlan` profile
-	 ```bash
+* Create a `macvlan` profile
+```bash
 	 $ incus create profile bridge
 	 $ incus profile device add bridge eth0 nic name=eth0 nictype=macvlan parent=br0
-	 ``` 
+``` 
 * Launch image with `macvlan` profile
 	 ```bash
 	 $ incus launch images:ubuntu/noble lan --profile default --profile macvlan

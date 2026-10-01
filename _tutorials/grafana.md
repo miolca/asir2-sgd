@@ -6,7 +6,9 @@ title: "Grafana stack metrics"
 # Grafana Metrics Stack
 La actividad consiste en obtener y visualizar la métrica de nuestra red simulada en _incus_ para ello deberemos crear y configurar varias instancias de _ubuntu 24.04_ cada una con su función que se describe brevemente a continuación:
 * Grafana : Web UI app para la visualización de 
+
 **Pasos**
+
 * Crear red asir network
  ```bash
   incus$ incus network create asirnetwork \
@@ -241,5 +243,3 @@ Se propone en la siguiente actividad que el alumno sea capaz de configurar los c
 - [ ] Configurar _alloy_ para que recoja los datos de métrica de apache y los almacene en _mirmir_.[Manual](https://grafana.com/docs/grafana-cloud/monitor-infrastructure/integrations/integration-reference/integration-apache-http/#configuration-snippets-for-grafana-alloy)
 - [ ] Muestra los datos en _grafana_
 
-
-I
