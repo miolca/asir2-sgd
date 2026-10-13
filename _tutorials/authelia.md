@@ -191,6 +191,7 @@ GRANT ALL PRIVILEGES ON DATABASE keycloak TO keycloak;
 Para autenticar usuarios de zammad en authelia medianto OIDC, debemos crear el cliente _OIDC_ denominado _zammad_.
 
 ```bash
+{% raw %}
 #/etc/authelia/configuration.yaml
 identity_providers:
   oidc:
@@ -219,12 +220,15 @@ identity_providers:
           access_token_signed_response_alg: 'none'
           userinfo_signed_response_alg: 'none'
           token_endpoint_auth_method: 'none'
+{% endraw %}
 ```
 
-
 > **warning** Warning
-> El fichero de configuración anterior añade una la línea `key: {{ secret "/etc/authelia/ssl/private_pkcs8.pem" | mindent 10 "|" | msquote }}` que es una característica experimental.
+{% raw %}
+> El fichero de configuración anterior añade una la línea `key: {{ secret "/etc/authelia/ssl/private_pkcs8.pem" | mindent 10 "|" | msquote }} ` que es una característica experimental.
+{% endraw %}
   > Para que _authelia_ arranque de forma correcta debemos añadir a la linea de arranque del servicio authelia _/usr/lib/systemd/system/authelia.service_ la opción filter template
+}
 > `ExecStart=/usr/bin/authelia --config /etc/authelia/configuration.yml --config.experimental.filters template` 
 
 ## Links

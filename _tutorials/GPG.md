@@ -2,8 +2,11 @@
 layout: default
 title: GPG. Pretty Good Privacy
 ---
+
+
+
 # Práctica GPG. Pretty Good Privacy
- 
+
 
  >[!NOTE]
  > OpenPGP is the most widely used email encryption standard. It is defined by the OpenPGP Working Group of the Internet Engineering Task Force (IETF) as a Proposed Standard in [RFC 9580](https://www.rfc-editor.org/rfc/rfc9580.html)
@@ -31,6 +34,42 @@ En esta práctica se trabajará sobre estos cuatro conceptos mediante la herrami
 * Ser capaces de firmar un documento y verificar que este ha sido firmado por quien dice ser.
 * Ser capaces de importar/exportar claves a un servidor público
 * Saber enviar correos cifrados y descifrar correos privados
+
+## Conceptos previos
+
+### Criptografía simétrica
+
+En este tipo de criptosistemas la clave para descifrar un criptograma (K') se calcula a partir de la clave (K) que se utilizó para cifrar el texto en claro, y viceversa. Lo habitual en los criptosistemas de este tipo es que ambas claves (K y K') coincidan, es decir, que se utilice la misma clave para cifrar un mensaje y para su descifrado.
+
+![cryptography_symmetric]({% link /resources/img/cryptography_symmetric.png %})
+
+Por tanto, la clave debe mantenerse en secreto entre el emisor y el receptor, ya que si se conociera por parte de terceras personas éstas no tendrían ningún problema para descifrar el criptograma.
+
+El principal problema de estos criptosistemas es precisamente lo anterior, es decir, mantener secreta la clave, ya que si se emplea un canal no seguro para enviarla se incurre en el mismo riesgo de que la intercepten que si enviáramos el texto en claro.
+
+
+
+### Criptografía asimétrica
+
+En este tipo de criptosistemas la clave para descifrar un criptograma (K') es diferente de la clave (K) que se utilizó para cifrar el texto en claro (de ahí el nombre de cifrado asimétrico) y, además, aunque no son independientes, del conocimiento de K no es posible deducir K', o al menos hasta el momento no se conoce que nadie lo haya logrado.
+
+![cryptography_symmetric]({% link /resources/img/cryptography_asymmetric.png %})
+
+
+### Criptografía híbrida
+
+En este tipo de criptosistemas el texto en claro se cifra mediante una clave de sesión (criptografía simétrica), correspondiente a cada mensaje particular y generada aleatoriamente, y la clave de sesión se cifra utilizando la clave pública del receptor (criptografía asimétrica), de tal manera que sólo el receptor puede obtener la clave de sesión mediante su clave privada (criptografía asimétrica) y posteriormente descifrar el texto cifrado mediante la clave de sesión (criptografía simétrica).
+
+![cryptography_symmetric]({% link /resources/img/cryptography_hybrid.png %})
+
+
+### Cifrado híbrido con firma digital
+
+El proceso de cifrado híbrido incorporando la firma digital y el de posterior descifrado incorporando la verificación de la autenticidad del emisor y de la integridad de la información recibida serían como se muestra en la siguiente figura
+
+![cryptography_symmetric]({% link /resources/img/cryptography_hybrid_digital_sign.png %})
+
+
 
 ## Comandos GPG
 >[!WARNING]
@@ -159,5 +198,8 @@ En esta actividad debes desgargar del servidor de llaves usado en clase todas la
 3. Súbelas a la carpeta compartida correspondiente para que tus compañeros puedan descargarse sus claves firmadas por ti. Sigue el siguiente estandard de nomenclatura. `<apellido_nombre>_signed_by_<tu nombre>.asc'
 4. Descargate tus claves públicas firmadas por tus compañeros y súbelas al servidor
 
+## Links
+
+[Criptografía para todos](https://mikelgarcialarragan.blogspot.com/2016/07/criptografia-xxi-criptologia-para-todos.html)
 
  

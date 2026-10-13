@@ -273,11 +273,21 @@ $ incus config device override <instace> eth0 network=macvlan
 	 ```
 
 ### Storage
-  ```bash
+```bash
 $ incus storage show
 $ incus storage info <pool_name>
 $ incus storage set <pool_name> size=<new_size>GiB
  ``` 
+
+ * Load iso as a volume
+ ```bash
+ $ incus storage volume import default ~/Download/file.iso file.iso --type=iso
+ $ incus config device add <insance> boot-media disk pool=default source=file.iso boot.priority=10
+ ```
+
+
+
+
  ### Custom images 
  #### [Linux based images](https://discussion.scottibyte.com/t/incus-virtual-machine-custom-installation/407)
  ```bash
