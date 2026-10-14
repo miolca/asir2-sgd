@@ -187,8 +187,8 @@ El proceso de cifrado híbrido incorporando la firma digital y el de posterior d
  ```
     * Alternativamente, si este método no funciona hay que copiar la clave en el portapapeles y subirla a través de la [página web](https://keys.mailvelope.com/manage.html), la clave pública, no se hara visible hasta que no se confirme el correo enviando de _mailevelope_
 
- * Obtenemos la clave pública del profesor (c.sanchezgarcia@edu.gva.es) del servidor de _mailvelope_
- * Envia un mensaje a c.sanchezgarcia2@edu.gva.es firmado por tí que demuestre la _autoría_ del mensaje y cifrado con la clave pública del profesor que asegure la confidencialidad. 
+ * Obtenemos la clave pública del profesor (m.olivercano@edu.gva.es) del servidor de _mailvelope_
+ * Envia un mensaje a m.olivercano@edu.gva.es firmado por tí que demuestre la _autoría_ del mensaje y cifrado con la clave pública del profesor que asegure la confidencialidad. 
 
 ### Firma claves de compañeros para crear un circulo de confianza
 [Tutorial](https://gist.github.com/F21/b0e8c62c49dfab267ff1d0c6af39ab84)
