@@ -6,47 +6,47 @@
 * [incus](https://miolca.github.io/asir2-sgd/tutorials/incus)
 
 ## Logs y métricas
-* [Gestión de logs con syslogs](https://miolca.github.io/asir2-sgd/tutorials/central_logs.md)
-* [Gestión de logs y métrica con grafana](https://miolca.github.io/asir2-sgd/tutorials/grafana.md)
+* [Gestión de logs con syslogs](https://miolca.github.io/asir2-sgd/tutorials/central_logs)
+* [Gestión de logs y métrica con grafana](https://miolca.github.io/asir2-sgd/tutorials/grafana)
 
 ## Sistema de ficheros
-* [ACL]({% link _tutorials/sistema_de_ficheros_permisos_acl.md %}) 
+* [ACL](https://miolca.github.io/asir2-sgd/tutorials/sistema_de_ficheros_permisos_acl) 
 ## Protección de datos
-* [LVM]({% link _tutorials/LVM.md %}) 
+* [LVM](https://miolca.github.io/asir2-sgd/tutorials/LVM) 
 
 ## Criptografia
-* [GPG](https://miolca.github.io/asir2-sgd/tutorials/GPG.md)
-* [PKI / OpenSSL]({% link _tutorials/openssl-pki.md %})
-* [Apache / TLS]({% link _tutorials/apache_tls_pki.md %})
+* [GPG](https://miolca.github.io/asir2-sgd/tutorials/GPG)
+* [PKI / OpenSSL](https://miolca.github.io/asir2-sgd/tutorials/openssl-pki)
+* [Apache / TLS](https://miolca.github.io/asir2-sgd/tutorials/apache_tls_pki)
 
 ## Autenticación
-* [Kerberos]({% link _tutorials/Kerberos.md %})
+* [Kerberos](https://miolca.github.io/asir2-sgd/tutorials/Kerberos)
 ## Firewall
-* [Netfilter/Openwrt]({% link _tutorials/Firewall.md %})
+* [Netfilter/Openwrt](https://miolca.github.io/asir2-sgd/tutorials/Firewall)
 
 ## VPN
-* [Tunneling]({% link _tutorials/Tunneling.md %})
-* [VPN]({% link _tutorials/VPN.md %})
+* [Tunneling](https://miolca.github.io/asir2-sgd/tutorials/Tunneling)
+* [VPN](https://miolca.github.io/asir2-sgd/tutorials/VPN)
 ## Alta disponibilidad
-* [Clustering]({% link _tutorials/clustering.md %})
-* [VPN]({% link _tutorials/VPN.md %})
+* [Clustering](https://miolca.github.io/asir2-sgd/tutorials/clustering)
+* [VPN]({https://miolca.github.io/asir2-sgd/tutorials/VPN)
 
 ## Anexos
 ### Anexo I. Utilidades
-* [Autojump]({% link _extra/autojump.md %})
-* [Byobu]({% link _extra/byobu.md %})
-* [Byobu cheatsheet]({% link _extra/byobu_cheatsheet.md %})
+* [Autojump](https://miolca.github.io/asir2-sgd/tutorials/autojump)
+* [Byobu](https://miolca.github.io/asir2-sgd/tutorials/byobu)
+* [Byobu cheatsheet](https://miolca.github.io/asir2-sgd/tutorials/byobu_cheatsheet)
 
 ### Anexo II. Ficheros de configuración
-* [Alloy config file]({% link _extra/alloy_config.md %})
-* [Mimir config file]({% link _extra/mimir_config.md %})
-* [Cloud init example]({% link _extra/profile-cloud-init.md %})
+* [Alloy config file](https://miolca.github.io/asir2-sgd/tutorials/alloy_config)
+* [Mimir config file]({https://miolca.github.io/asir2-sgd/tutorials/mimir_config)
+* [Cloud init example](https://miolca.github.io/asir2-sgd/tutorials/profile-cloud-init)
 
 ### Anexo II. HOWTOs
-* [sshfs mount config]({% link _extra/sshfs.md %})
-* [Opensense]({% link _extra/opensense.md %})
-* [OpenWrt]({% link _extra/openwrt.md %})
-* [OpenVirtual Switch (OVS)]({% link _extra/ovs-incus.md %})
+* [sshfs mount config](https://miolca.github.io/asir2-sgd/tutorials/sshfs)
+* [Opensense](https://miolca.github.io/asir2-sgd/tutorials/opensense)
+* [OpenWrt](https://miolca.github.io/asir2-sgd/tutorials/openwrt)
+* [OpenVirtual Switch (OVS)](https://miolca.github.io/asir2-sgd/tutorials/ovs-incus)
 
 
 
