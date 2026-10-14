@@ -12,7 +12,7 @@
 ## Sistema de ficheros
 * [ACL](https://miolca.github.io/asir2-sgd/tutorials/sistema_de_ficheros_permisos_acl) 
 ## Protección de datos
-* [LVM](https://miolca.github.io/asir2-sgd/tutorials/LVM) 
+* [LVM](https://miolca.github.io/asir2-sgd/tutorials/lvm) 
 
 ## Criptografia
 * [GPG](https://miolca.github.io/asir2-sgd/tutorials/GPG)
@@ -20,16 +20,15 @@
 * [Apache / TLS](https://miolca.github.io/asir2-sgd/tutorials/apache_tls_pki)
 
 ## Autenticación
-* [Kerberos](https://miolca.github.io/asir2-sgd/tutorials/Kerberos)
+* [Kerberos](https://miolca.github.io/asir2-sgd/tutorials/kerberos)
 ## Firewall
-* [Netfilter/Openwrt](https://miolca.github.io/asir2-sgd/tutorials/Firewall)
+* [Netfilter/Openwrt](https://miolca.github.io/asir2-sgd/tutorials/firewall)
 
 ## VPN
-* [Tunneling](https://miolca.github.io/asir2-sgd/tutorials/Tunneling)
-* [VPN](https://miolca.github.io/asir2-sgd/tutorials/VPN)
+* [Tunneling](https://miolca.github.io/asir2-sgd/tutorials/tunneling)
+* [VPN](https://miolca.github.io/asir2-sgd/tutorials/vpn)
 ## Alta disponibilidad
 * [Clustering](https://miolca.github.io/asir2-sgd/tutorials/clustering)
-* [VPN]({https://miolca.github.io/asir2-sgd/tutorials/VPN)
 
 ## Anexos
 ### Anexo I. Utilidades
@@ -43,10 +42,10 @@
 * [Cloud init example](https://miolca.github.io/asir2-sgd/extra/profile-cloud-init)
 
 ### Anexo II. HOWTOs
-* [sshfs mount config](https://miolca.github.io/asir2-sgd/tutorials/sshfs)
-* [Opensense](https://miolca.github.io/asir2-sgd/tutorials/opensense)
-* [OpenWrt](https://miolca.github.io/asir2-sgd/tutorials/openwrt)
-* [OpenVirtual Switch (OVS)](https://miolca.github.io/asir2-sgd/tutorials/ovs-incus)
+* [sshfs mount config](https://miolca.github.io/asir2-sgd/extra/sshfs)
+* [Opensense](https://miolca.github.io/asir2-sgd/extra/opensense)
+* [OpenWrt](https://miolca.github.io/asir2-sgd/extra/openwrt)
+* [OpenVirtual Switch (OVS)](https://miolca.github.io/asir2-sgd/extra/ovs-incus)
 
 
 
