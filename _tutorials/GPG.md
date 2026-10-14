@@ -109,7 +109,7 @@ El proceso de cifrado híbrido incorporando la firma digital y el de posterior d
  ```
  2. **Listar/borrar claves pública/privada**
  ```bash
- $ gpg --list-key
+ $ gpg --list-key --keyid-format LONG
  $ gpg --list-secret-keys
  $ gpg --list-public-keys
  $ gpg --list-public-keys --keyid-format=short
@@ -177,7 +177,7 @@ El proceso de cifrado híbrido incorporando la firma digital y el de posterior d
     ```
     Alternativamente, podemos usar la utilidad _xsel_ para copiarla al portapapeles de forma rápida
     ```bash
-    gpg --amrour --export-secret-keys <key-id> | xsel --clipboard
+    gpg --armour --export-secret-keys <key-id> | xsel --clipboard
     ```
  * Subimos nuestra cláve pública al servidor de _mailvelope_ para que los demás puedan descargarsela de forma rápida
     * Obtenemos el _key-id_ listando la clave asociada a mi e-mail y la subimos al servidor de _mailvelope_
@@ -185,18 +185,23 @@ El proceso de cifrado híbrido incorporando la firma digital y el de posterior d
  gpg --list-key <e-mail>
  gpg --keyserver hkps://keys.mailvelope.com --send-keys <key-id>
  ```
-    * Alternativamente, si este método no funciona hay que copiar la clave en el portapapeles y subirla a través de la [página web](https://keys.mailvelope.com/manage.html), la clave pública, no se hara visible hasta que no se confirme el correo enviando de _mailevelope_
+    * REVISA EL CORREO. Alternativamente, si este método no funciona hay que copiar la clave en el portapapeles y subirla a través de la [página web](https://keys.mailvelope.com/manage.html), la clave pública, no se hara visible hasta que no se confirme el correo enviando de _mailevelope_
 
  * Obtenemos la clave pública del profesor (m.olivercano@edu.gva.es) del servidor de _mailvelope_
  * Envia un mensaje a m.olivercano@edu.gva.es firmado por tí que demuestre la _autoría_ del mensaje y cifrado con la clave pública del profesor que asegure la confidencialidad. 
 
-### Firma claves de compañeros para crear un circulo de confianza
-[Tutorial](https://gist.github.com/F21/b0e8c62c49dfab267ff1d0c6af39ab84)
-En esta actividad debes desgargar del servidor de llaves usado en clase todas las claves de tus compañeros ) y firmarlas con tu clave privada.
-1. Actualiza el documento compartido con tu identificador de clave y descarga las claves de los demás compañeros
-2. Firma las claves públicas de tus compañeros con tu clave privada haciendo estas de confianza y ampliando el círculo de confianza.
-3. Súbelas a la carpeta compartida correspondiente para que tus compañeros puedan descargarse sus claves firmadas por ti. Sigue el siguiente estandard de nomenclatura. `<apellido_nombre>_signed_by_<tu nombre>.asc'
-4. Descargate tus claves públicas firmadas por tus compañeros y súbelas al servidor
+### Firma de claves por parejas para crear un círculo de confianza
+
+[Tutorial](https://gist.github.com/F21/b0e8c62c49dfab267ff1d0c6af39ab84)  
+En esta actividad debes intercambiar tu clave con tu compañero/a de pareja asignado/a, verificar la autenticidad de la clave descargada del servidor y firmarla con tu clave privada.
+
+1. **Intercambiar identificadores:** Comparte directamente con tu pareja tu **Key ID** y la **huella digital (Fingerprint)** de tu clave pública a través del canal de comunicación asignado (chat corporativo, videoconferencia o correo).
+2. **Descargar la clave:** Busca y descarga del servidor de Mailvelope la clave pública de tu pareja utilizando el Key ID o correo que te ha facilitado.
+3. **Comparar la huella digital (Fingerprint):** Compara los 40 caracteres de la huella digital de la clave que has descargado con los que te envió tu pareja. **Deben coincidir exactamente antes de continuar** para garantizar que no hay suplantación de identidad.
+4. **Firmar la clave y sincronizar:** Una vez confirmada la coincidencia, firma la clave pública de tu pareja con tu clave privada y re-sube la clave de tu pareja al servidor de llaves para que reciba tu firma automáticamente.
+5. **Comprobar el resultado:** Descarga las actualizaciones de tu propia clave desde el servidor para integrar la firma que tu pareja ha hecho sobre ti y comprueba que todo se ha completado correctamente mediante el comando:
+   ```bash
+   gpg --list-sigs <TU_KEY_ID>
 
 ## Links
 
