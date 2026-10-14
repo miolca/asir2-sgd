@@ -3,11 +3,11 @@
 
 # Práctica SGD
 ## General - máquinas virtuales y contenedores
-* [incus]({% link _tutorials/incus.md %})
+* [incus](https://miolca.github.io/asir2-sgd/tutorials/incus)
 
 ## Logs y métricas
-* [Gestión de logs con syslogs]({% link _tutorials/central_logs.md %})
-* [Gestión de logs y métrica con grafana]({% link _tutorials/grafana.md %})
+* [Gestión de logs con syslogs](https://miolca.github.io/asir2-sgd/tutorials/central_logs.md)
+* [Gestión de logs y métrica con grafana](https://miolca.github.io/asir2-sgd/tutorials/grafana.md)
 
 ## Sistema de ficheros
 * [ACL]({% link _tutorials/sistema_de_ficheros_permisos_acl.md %}) 
@@ -15,7 +15,7 @@
 * [LVM]({% link _tutorials/LVM.md %}) 
 
 ## Criptografia
-* [GPG]({% link _tutorials/GPG.md %})
+* [GPG](https://miolca.github.io/asir2-sgd/tutorials/GPG.md)
 * [PKI / OpenSSL]({% link _tutorials/openssl-pki.md %})
 * [Apache / TLS]({% link _tutorials/apache_tls_pki.md %})
 
