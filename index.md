@@ -33,14 +33,14 @@
 
 ## Anexos
 ### Anexo I. Utilidades
-* [Autojump](https://miolca.github.io/asir2-sgd/tutorials/autojump)
-* [Byobu](https://miolca.github.io/asir2-sgd/tutorials/byobu)
-* [Byobu cheatsheet](https://miolca.github.io/asir2-sgd/tutorials/byobu_cheatsheet)
+* [Autojump](https://miolca.github.io/asir2-sgd/extra/autojump)
+* [Byobu](https://miolca.github.io/asir2-sgd/extra/byobu)
+* [Byobu cheatsheet](https://miolca.github.io/asir2-sgd/extra/byobu_cheatsheet)
 
 ### Anexo II. Ficheros de configuración
-* [Alloy config file](https://miolca.github.io/asir2-sgd/tutorials/alloy_config)
-* [Mimir config file]({https://miolca.github.io/asir2-sgd/tutorials/mimir_config)
-* [Cloud init example](https://miolca.github.io/asir2-sgd/tutorials/profile-cloud-init)
+* [Alloy config file](https://miolca.github.io/asir2-sgd/extra/alloy_config)
+* [Mimir config file](https://miolca.github.io/asir2-sgd/extra/mimir_config)
+* [Cloud init example](https://miolca.github.io/asir2-sgd/extra/profile-cloud-init)
 
 ### Anexo II. HOWTOs
 * [sshfs mount config](https://miolca.github.io/asir2-sgd/tutorials/sshfs)
