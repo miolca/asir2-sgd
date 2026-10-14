@@ -1,9 +1,9 @@
 # Site settings
 title: Prácticas ASIR2 
-repository: ASIR2-SGD/asir2-sgd.github.io.git
+repository: miolca/asir2-sgd
 description: >-
   Assignmets docs for asir2
-title: "ASIR2 DOC 2025/26"
+title: "ASIR2 DOC 2026/27"
 markdown: GFM
 
 plugins:
