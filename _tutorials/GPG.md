@@ -153,18 +153,18 @@ El proceso de cifrado híbrido incorporando la firma digital y el de posterior d
 > Puedes aprovechar y aprender a utilizar *markdown* un lenguaje de marcas muy sencillo con el que podrás hacer documentos como este mismo.
 
 ### Integridad y autoría de un documento/mensaje**
- Simula en esta actividad que alguien quiere cambiar un documento firmado, vamos a suponer que es un testamento.  Actua como si fueras un notario con su par de claves ([pública](https://raw.githubusercontent.com/ASIR2-SGD/asir2-sgd.github.io/refs/heads/main/resources/files/notario-public-key.pub)/[privada](https://raw.githubusercontent.com/ASIR2-SGD/asir2-sgd.github.io/refs/heads/main/resources/files/notario-private-key.key)) y has firmado la validez del testamento.
+ Simula en esta actividad que alguien quiere cambiar un documento firmado, vamos a suponer que es un testamento.  Actua como si fueras un notario con su par de claves ([pública](https://raw.githubusercontent.com/miolca/asir2-sgd/main/resources/files/notario-public-key.pub)/[privada](https://raw.githubusercontent.com/miolca/asir2-sgd/main/resources/files/notario-private-key.key)) y has firmado la validez del testamento.
  
  1.  Importa las claves del notarios (_passphrase: sad_)
- 2. Usa las claves para firmar documento [testamento.txt](https://raw.githubusercontent.com/ASIR2-SGD/asir2-sgd.github.io/refs/heads/main/resources/files/testamento.txt) sin cifrar --clearsign
+ 2. Usa las claves para firmar documento [testamento.txt](https://raw.githubusercontent.com/miolca/asir2-sgd/main/resources/files/testamento.txt) sin cifrar --clearsign
 3. Modifica el documento firmado y verifica 
 4. Explica los comandos utilizados.
 
 ### Firma un documento encriptado y verifica**
-1. Descarga el par de claves [pública](https://raw.githubusercontent.com/ASIR2-SGD/asir2-sgd.github.io/refs/heads/main/resources/files/asir2_student_pub.asc)/[privada](https://raw.githubusercontent.com/ASIR2-SGD/asir2-sgd.github.io/refs/heads/main/resources/files/asir2_student_key.asc) de _asir2_student_
+1. Descarga el par de claves [pública](https://raw.githubusercontent.com/miolca/asir2-sgd/main/resources/files/asir2_student_pub.asc)/[privada](https://raw.githubusercontent.com/miolca/asir2-sgd/main/resources/files/asir2_student_key.asc) de _asir2_student_
 2. Impórtalas a tu anillo de claves 
-	1. Necesitarás obtener el passphrase que obtendras descifrando el siguiente [documento](https://raw.githubusercontent.com/ASIR2-SGD/asir2-sgd.github.io/refs/heads/main/resources/files/asir2_keys_passphrase.asc) de forma simétrica con la clave _'n0l0dig4$'_
-3. Descrifra el siguiente [mensaje](https://raw.githubusercontent.com/ASIR2-SGD/asir2-sgd.github.io/refs/heads/main/resources/files/task_encrypted_and_signed.asc) y haz lo que dice el mensaje
+	1. Necesitarás obtener el passphrase que obtendras descifrando el siguiente [documento](https://raw.githubusercontent.com/miolca/asir2-sgd/main/resources/files/asir2_keys_passphrase.asc) de forma simétrica con la clave _'n0l0dig4$'_
+3. Descrifra el siguiente [mensaje](https://raw.githubusercontent.com/miolca/asir2-sgd/main/resources/files/task_encrypted_signed.asc) y haz lo que dice el mensaje
 4. ¿Quién ha firmado el mensaje?
 
 
