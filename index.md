@@ -6,18 +6,18 @@
 * [incus](https://miolca.github.io/asir2-sgd/tutorials/incus)
 
 ## Logs y métricas
-* [Gestión de logs con syslogs](https://miolca.github.io/asir2-sgd/tutorials/central_logs)
+* [Gestión de logs con syslogs](https://miolca.github.io/asir2-sgd/tutorials/central-logs)
 * [Gestión de logs y métrica con grafana](https://miolca.github.io/asir2-sgd/tutorials/grafana)
 
 ## Sistema de ficheros
-* [ACL](https://miolca.github.io/asir2-sgd/tutorials/sistema_de_ficheros_permisos_acl) 
+* [ACL](https://miolca.github.io/asir2-sgd/tutorials/sistema-de-ficheros-permisos-acl) 
 ## Protección de datos
 * [LVM](https://miolca.github.io/asir2-sgd/tutorials/lvm) 
 
 ## Criptografia
-* [GPG](https://miolca.github.io/asir2-sgd/tutorials/GPG)
+* [GPG](https://miolca.github.io/asir2-sgd/tutorials/gpg)
 * [PKI / OpenSSL](https://miolca.github.io/asir2-sgd/tutorials/openssl-pki)
-* [Apache / TLS](https://miolca.github.io/asir2-sgd/tutorials/apache_tls_pki)
+* [Apache / TLS](https://miolca.github.io/asir2-sgd/tutorials/apache-tls-pki)
 
 ## Autenticación
 * [Kerberos](https://miolca.github.io/asir2-sgd/tutorials/kerberos)
