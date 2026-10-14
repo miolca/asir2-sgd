@@ -27,6 +27,7 @@
 ## VPN
 * [Tunneling](https://miolca.github.io/asir2-sgd/tutorials/tunneling)
 * [VPN](https://miolca.github.io/asir2-sgd/tutorials/vpn)
+  
 ## Alta disponibilidad
 * [Clustering](https://miolca.github.io/asir2-sgd/tutorials/clustering)
 
@@ -37,8 +38,8 @@
 * [Byobu cheatsheet](https://miolca.github.io/asir2-sgd/extra/byobu_cheatsheet)
 
 ### Anexo II. Ficheros de configuración
-* [Alloy config file](https://miolca.github.io/asir2-sgd/extra/alloy_config)
-* [Mimir config file](https://miolca.github.io/asir2-sgd/extra/mimir_config)
+* [Alloy config file](https://miolca.github.io/asir2-sgd/extra/alloy-config)
+* [Mimir config file](https://miolca.github.io/asir2-sgd/extra/mimir-config)
 * [Cloud init example](https://miolca.github.io/asir2-sgd/extra/profile-cloud-init)
 
 ### Anexo II. HOWTOs
